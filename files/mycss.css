@@ -1,0 +1,36 @@
+body{
+  background-color: lightblue;
+}
+
+* {
+  box-sizing: border-box;
+}
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.main {
+  float: left;
+  width: 80%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.right {
+  background-color: DodgerBlue;
+  float: left;
+  width: 20%;
+  min-height: 580px;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+footer{
+  background-color:DodgerBlue;
+  text-align:center;
+  position: fixed;
+  bottom: 0;
+  left:0;	
+  width: 100%;
+  padding:14px;
+  font-size:12px;
+}
