@@ -1,0 +1,15 @@
+version: 0.0
+os: windows
+
+files:
+  - source: files/
+    destination: C:\\inetpub\\wwwroot
+
+hooks:
+  BeforeInstall:
+    - location: scripts/webserver-stop.ps1
+    - location: scripts/delete-old-index.ps1
+  AfterInstall:
+    - location: scripts/sleep.ps1
+    - location: scripts/webserver-start.ps1
+
