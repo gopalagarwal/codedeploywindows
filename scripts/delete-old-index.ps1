@@ -1,1 +1,1 @@
-Remove-item C:\\inetpub\\wwwroot\\HelloGopal\\index.html
+Remove-item C:\\inetpub\\wwwroot\\lr-api-v1
