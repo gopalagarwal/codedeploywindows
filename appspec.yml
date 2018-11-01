@@ -3,7 +3,7 @@ os: windows
 
 files:
   - source: files/
-    destination: C:\\inetpub\\wwwroot\\lr-api-v1
+    destination: C:\\inetpub\\wwwroot
 
 hooks:
   BeforeInstall:
