@@ -1,1 +1,1 @@
-Remove-item C:\\inetpub\\wwwroot\\index.html
+Remove-item C:\\inetpub\\wwwroot\\lr-api-v1\\index.html
