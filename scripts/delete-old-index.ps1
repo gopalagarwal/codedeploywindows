@@ -1,1 +1,1 @@
-Remove-item C:\\inetpub\\wwwroot\\index.html
+Remove-item C:\\inetpub\\wwwroot\\HelloGopal\\index.html
