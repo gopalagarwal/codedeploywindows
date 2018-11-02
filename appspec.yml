@@ -2,14 +2,11 @@ version: 0.0
 os: windows
 
 files:
-  - source: files/
-    destination: C:\\inetpub\\wwwroot\\lr-api-v1
+  - source: \
+    destination: C:\temp\WebApp\lr-api-v1
 
 hooks:
   BeforeInstall:
-    - location: scripts/webserver-stop.ps1
-    - location: scripts/delete-old-index.ps1
-  AfterInstall:
-    - location: scripts/sleep.ps1
-    - location: scripts/webserver-start.ps1
-
+    - location: ./StageArtifact.ps1
+    - location: ./CreateWebSite.ps1
+ 

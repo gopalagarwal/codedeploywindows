@@ -1,0 +1,1 @@
+New-WebApplication -Site "Default lr-api-v1 Web Site" -Name lrapiv1 -PhysicalPath c:\inetpub\wwwroot\lr-api-v1 -Force
