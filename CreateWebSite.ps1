@@ -1,1 +1,1 @@
-New-WebApplication -Site "Default lr-api-v1 Web Site" -Name lrapiv1 -PhysicalPath c:\inetpub\wwwroot\lr-api-v1 -Force
+New-WebApplication -Site "Default Web Site" -Name MusicWorld -PhysicalPath c:\inetpub\wwwroot\MusicWorld -Force
