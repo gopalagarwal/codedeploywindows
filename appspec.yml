@@ -6,5 +6,5 @@ files:
   
 hooks:
   AfterInstall:
-    - location: .\StageArtifact.ps1
-    - location: .\CreateWebSite.ps1
+    - location: C:\temp\WebApp\MusicWorld\StageArtifact.ps1
+    - location: C:\temp\WebApp\MusicWorld\CreateWebSite.ps1
