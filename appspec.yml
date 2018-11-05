@@ -7,10 +7,15 @@ files:
 hooks:
   BeforeInstall:
     - location: .\temp.ps1
+      timeout: 500
     - location: .\StageArtifact.ps1
+      timeout: 500
     - location: .\CreateWebSite.ps1
+      timeout: 500
     - location: .\temp2.ps1
+      timeout: 500
 
   AfterInstall:
     - location: .\temp3.ps1
+      timeout: 500
   
