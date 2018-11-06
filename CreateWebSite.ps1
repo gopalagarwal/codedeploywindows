@@ -12,5 +12,5 @@ Catch
 Finally
 {
     $Time=Get-Date
-    "This script made a read attempt at $Time" | out-file c:\logs\ExpensesScript.log -append
+    "This script made a read attempt at $Time, ERROR_LR $ErrorMessage, FAILED_LR $FailedItem" | out-file c:\logs\CreateScript.log -append
 }
