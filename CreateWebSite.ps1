@@ -1,7 +1,7 @@
 Try
 {
-    New-WebSite -Name server1 -Port 4444 -PhysicalPath 'c:\\inetpub\\wwwroot\\MusicWorld' -Force
-    netsh advfirewall firewall add rule name='Open Port 4444' dir=in action=allow protocol=TCP localport=4444
+    New-WebSite -Name server5 -Port 4444 -PhysicalPath 'c:\inetpub\wwwroot\MusicWorld' -Force
+    netsh advfirewall firewall add rule name='Open Port 5555' dir=in action=allow protocol=TCP localport=5555
 }
 Catch
 {
