@@ -1,6 +1,6 @@
 Try
 {
-    $target = "C:\inetpub\wwwroot\MusicWorld\" 
+    $target = "C:\\inetpub\\wwwroot\\MusicWorld\\" 
     function DeleteIfExistsAndCreateEmptyFolder($dir )
     {
         if ( Test-Path $dir ) {    
@@ -12,7 +12,7 @@ Try
 
     DeleteIfExistsAndCreateEmptyFolder($target )
     
-    $path2 = "C:\temp\WebApp\MusicWorld\HelloGopal\*"
+    $path2 = "C:\\temp\\WebApp\\MusicWorld\\HelloGopal\\*"
 
     Copy-Item $path2 $target -recurse -force
 }
@@ -25,5 +25,5 @@ Catch
 Finally
 {
     $Time=Get-Date
-    "This script made a read attempt at $Time, ERROR_LR $ErrorMessage, FAILED_LR $FailedItem" | out-file c:\logs\StageScript.log -append
+    "This script made a read attempt at $Time, ERROR_LR $ErrorMessage, FAILED_LR $FailedItem" | out-file c:\\logs\\StageScript.log -append
 }
