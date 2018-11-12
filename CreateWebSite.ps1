@@ -1,7 +1,7 @@
 Try
 {
-    New-WebSite -Name server6 -Port 6666 -PhysicalPath 'C:\inetpub\wwwroot\MusicWorld' -Force
-    netsh advfirewall firewall add rule name='Open Port 6666' dir=in action=allow protocol=TCP localport=6666
+    powershell.exe New-WebSite -Name server6 -Port 6666 -PhysicalPath 'C:\inetpub\wwwroot\MusicWorld' -Force
+    powershell.exe netsh advfirewall firewall add rule name='Open Port 6666' dir=in action=allow protocol=TCP localport=6666
 }
 Catch
 {
