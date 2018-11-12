@@ -5,10 +5,6 @@ files:
     destination: C:\temp\WebApp\lr-api-v1
   
 hooks:
-  BeforeInstall: 
-    - location: .\temp2.ps1
-      timeout: 3600
-
   AfterInstall:
     - location: .\StageArtifact.ps1
       timeout: 3600
