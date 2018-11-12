@@ -1,6 +1,21 @@
+#############################################
+# am I running in 32 bit shell?
+#############################################
+if ($pshome -like "*syswow64*") {
+ 
+    Write-Warning "Restarting script under 64 bit powershell"
+   
+    # relaunch this script under 64 bit shell
+    & (join-path ($pshome -replace "syswow64", "sysnative") powershell.exe) -file `
+      (join-path $psscriptroot $myinvocation.mycommand) @args
+   
+    # exit 32 bit script
+    exit $lastexitcode
+}
 Try
 {
-    $target = "C:\inetpub\wwwroot\MusicWorld\" 
+    Set-ExecutionPolicy RemoteSigned
+    $target = "C:\inetpub\wwwroot\lr-api-v1\" 
     function DeleteIfExistsAndCreateEmptyFolder($dir )
     {
         if ( Test-Path $dir ) {    
@@ -12,7 +27,7 @@ Try
 
     DeleteIfExistsAndCreateEmptyFolder($target )
     
-    $path2 = "C:\temp\WebApp\MusicWorld\HelloGopal\*"
+    $path2 = "C:\temp\WebApp\lr-api-v1\HelloGopal\*"
 
     Copy-Item $path2 $target -recurse -force
 }

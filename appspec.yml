@@ -2,7 +2,7 @@ version: 0.0
 os: windows
 files:
   - source: \
-    destination: C:\inetpub\wwwroot\MusicWorld
+    destination: C:\temp\WebApp\lr-api-v1
   
 hooks:
   BeforeInstall: 
@@ -10,8 +10,8 @@ hooks:
       timeout: 3600
 
   AfterInstall:
+    - location: .\StageArtifact.ps1
+      timeout: 3600
     - location: .\CreateWebSite.ps1
       timeout: 3600
-    - location: .\temp3.ps1
-      timeout: 500
   

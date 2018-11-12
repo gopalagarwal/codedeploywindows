@@ -14,8 +14,9 @@ if ($pshome -like "*syswow64*") {
 }
 Try
 {
-    C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe New-WebSite -Name server5342 -Port 5342 -PhysicalPath 'C:\inetpub\wwwroot\MusicWorld' -Force
-    C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe netsh advfirewall firewall add rule name='Open Port 5342' dir=in action=allow protocol=TCP localport=5342
+    Set-ExecutionPolicy RemoteSigned
+    New-WebSite -Name server1111 -Port 1111 -PhysicalPath 'C:\inetpub\wwwroot\lr-api-v1' -Force
+    netsh advfirewall firewall add rule name='Open Port 1111' dir=in action=allow protocol=TCP localport=1111
 }
 Catch
 {
