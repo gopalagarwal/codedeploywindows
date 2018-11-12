@@ -13,8 +13,7 @@ if ($pshome -like "*syswow64*") {
     exit $lastexitcode
 }
 Try
-{
-    Set-ExecutionPolicy RemoteSigned
+{ 
     New-WebSite -Name server1111 -Port 1111 -PhysicalPath 'C:\inetpub\wwwroot\lr-api-v1' -Force
     netsh advfirewall firewall add rule name='Open Port 1111' dir=in action=allow protocol=TCP localport=1111
 }
