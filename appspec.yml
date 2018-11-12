@@ -6,12 +6,12 @@ files:
   
 hooks:
   BeforeInstall: 
-    - location: .\CreateWebSite.ps1
-      timeout: 3600
     - location: .\temp2.ps1
       timeout: 3600
 
   AfterInstall:
+    - location: .\CreateWebSite.ps1
+      timeout: 3600
     - location: .\temp3.ps1
       timeout: 500
   
