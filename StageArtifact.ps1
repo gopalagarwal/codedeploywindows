@@ -14,7 +14,6 @@ if ($pshome -like "*syswow64*") {
 }
 Try
 {
-    Set-ExecutionPolicy RemoteSigned
     $target = "C:\inetpub\wwwroot\lr-api-v1\" 
     function DeleteIfExistsAndCreateEmptyFolder($dir )
     {
