@@ -1,7 +1,21 @@
+#############################################
+# am I running in 32 bit shell?
+#############################################
+if ($pshome -like "*syswow64*") {
+ 
+    Write-Warning "Restarting script under 64 bit powershell"
+   
+    # relaunch this script under 64 bit shell
+    & (join-path ($pshome -replace "syswow64", "sysnative") powershell.exe) -file `
+      (join-path $psscriptroot $myinvocation.mycommand) @args
+   
+    # exit 32 bit script
+    exit $lastexitcode
+}
 Try
 {
-    C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe New-WebSite -Name server126 -Port 3242 -PhysicalPath 'C:\inetpub\wwwroot\MusicWorld' -Force
-    C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe netsh advfirewall firewall add rule name='Open Port 3242' dir=in action=allow protocol=TCP localport=3242
+    C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe New-WebSite -Name server5342 -Port 5342 -PhysicalPath 'C:\inetpub\wwwroot\MusicWorld' -Force
+    C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe netsh advfirewall firewall add rule name='Open Port 5342' dir=in action=allow protocol=TCP localport=5342
 }
 Catch
 {
